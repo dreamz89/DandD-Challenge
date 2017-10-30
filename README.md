@@ -7,8 +7,11 @@ Live Link: http://dreamz89.github.io/DandD-Challenge
 
 This site was created using the D&D 5th edition API: http://www.dnd5eapi.co/
 
+# Planning process
+![Wireframes](https://i.imgur.com/eD18KZl.jpg)
+
 ## Challenges Faced
-* 
+*
 
 ## Built With
 * HTML5
