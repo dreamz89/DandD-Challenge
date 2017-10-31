@@ -4,6 +4,38 @@ body, html {
   height: 100%;
 }
 
-.header #logo {
+#header #logo {
   width: 100%
+}
+
+#title .ttitle {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 70px;
+  margin: 1% 0 1% 0
+}
+
+#body {
+  margin-left: 15%;
+  margin-right: 15%;
+  background-color: grey;
+}
+
+#body .proficiencies .charac {
+  max-width: 40%;
+}
+#body .equipment, .spells, .subclass {
+  clear:both;
+}
+#body .left {
+  float: left;
+  margin: 2%
+}
+#body .right {
+  float: right;
+  margin: 2%
+}
+#body .text {
+  padding: 0.5% 3%
 }
