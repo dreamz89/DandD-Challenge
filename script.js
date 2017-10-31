@@ -7,12 +7,10 @@ $(document).ready(function () {
   $.get('http://www.dnd5eapi.co/api/classes/' + index).done(function (data) {
     console.log(data)
     var charac = ''
-    var patron = ''
     var title = ''
     switch (data.index) {
       case 1:
         charac = 'images/01Barbarian.jpg'
-        patron = 'images/01Berserker.jpg'
         title = 'Barbarian'
         break
       case 2:
@@ -60,9 +58,21 @@ $(document).ready(function () {
         title = 'Wizard'
         break
     }
-
-    $('.charac').attr('src', charac)
+    // change title class according to data
     var t = document.createTextNode(title)
     $('.ttitle').append(t)
+
+    // change class picture according to data
+    $('.charac').attr('src', charac)
+
+    // add proficiencies hit die
+    var hd = document.createTextNode(data.hit_die)
+    $('.hd').append(hd)
+
+    // add proficiencies proficiencies
+    for (var i = 0; i < data.proficiencies.length; i++) {
+      var pf = document.createTextNode(data.proficiencies[i].name)
+      $('.pf1').append(pf).append($('<br>'))
+    }
   })
 })
