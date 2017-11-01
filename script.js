@@ -2,7 +2,7 @@
   var index = Math.floor(Math.random() * 11 + 1).toString()
 
   // get data from API
-  $.get('http://www.dnd5eapi.co/api/classes/' + index).done(function (data) {
+  $.get('//http://www.dnd5eapi.co/api/classes/' + index).done(function (data) {
     console.log(data)
     var charac = ''
     var title = ''
