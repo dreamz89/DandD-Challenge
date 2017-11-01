@@ -1,5 +1,3 @@
-$(document).ready(function () {
-
   // randomise the class called by its index from 1 - 12
   var index = Math.floor(Math.random() * 11 + 1).toString()
 
@@ -157,9 +155,9 @@ $(document).ready(function () {
       $.get(data.spellcasting.url).done(function (spdata) {
         for (var m = 0; m < spdata.info.length; m++) {
           var spName = document.createTextNode(spdata.info[m].name)
-          $('.spells .text').append($('<p>')).append(spName).append($('<p>'))
+          $('.spells .text').append($('<p>')).append(spName).append($('</p>'))
           var spDesc = document.createTextNode(spdata.info[m].desc[0])
-          $('.spells .text').append($('<p>')).append(spDesc).append($('<p>'))
+          $('.spells .text').append($('<p>')).append(spDesc).append($('</p>'))
         }
       })
     } else {
@@ -176,4 +174,3 @@ $(document).ready(function () {
       $('.desc').append(scd)
     })
   })
-})

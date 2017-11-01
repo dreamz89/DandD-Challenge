@@ -11,7 +11,7 @@ This site was created using the D&D 5th edition API: http://www.dnd5eapi.co/
 ![Wireframes](https://i.imgur.com/eD18KZl.jpg)
 
 # Challenges Faced
-* JSON data is not standard (eg. some classes dont have Spells, Monk class has different proficiency_choices format, and Fighter doesnt have starting equipment)
+* JSON data is not standard (eg. some classes dont have Spells, Monk class has different proficiency_choices format, and Fighter doesnt have starting equipment) (Monk has more equipment in choice_1)
 
 # Built With
 * HTML5
