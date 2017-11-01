@@ -72,7 +72,10 @@ $(document).ready(function () {
     // add proficiencies proficiencies
     for (var i = 0; i < data.proficiencies.length; i++) {
       var pf = document.createTextNode(data.proficiencies[i].name)
-      $('.pf1').append(pf).append(', ')
+      $('.pf1').append(pf)
+      if (i < data.proficiencies.length - 1) {
+        $('.pf1').append(', ')
+      }
     }
 
     // add proficiency choices
@@ -82,11 +85,14 @@ $(document).ready(function () {
         $('.pf2').append($('<p>')).append(choiceNum)
         for (var k = 0; k < data.proficiency_choices[j].from.length; k++) {
           if ((data.proficiency_choices[j].from[k].name).includes('Skill')) {
-            var pc = document.createTextNode(data.proficiency_choices[j].from[k].name.substring(7) + ', ')
+            var pc = document.createTextNode(data.proficiency_choices[j].from[k].name.substring(7))
           } else {
-            pc = document.createTextNode(data.proficiency_choices[j].from[k].name + ', ')
+            pc = document.createTextNode(data.proficiency_choices[j].from[k].name)
           }
           $('.pf2').append(pc)
+          if (k < data.proficiency_choices[j].from.length - 1) {
+            $('.pf2').append(', ')
+          }
         }
         $('.pf2').append($('</p>'))
       }
@@ -95,16 +101,22 @@ $(document).ready(function () {
         choiceNum = document.createTextNode('(Choose ' + data.proficiency_choices[0].from[n].choose + ' from) ')
         $('.pf2').append($('<p>')).append(choiceNum)
         for (var o = 0; o < data.proficiency_choices[0].from[n].from.length; o++) {
-          pc = document.createTextNode(data.proficiency_choices[0].from[n].from[o].name + ', ')
+          pc = document.createTextNode(data.proficiency_choices[0].from[n].from[o].name)
           $('.pf2').append(pc)
+          if (o < data.proficiency_choices[0].from[n].from.length - 1) {
+            $('.pf2').append(', ')
+          }
         }
         $('.pf2').append($('</p>'))
       }
       choiceNum = document.createTextNode('(Choose ' + data.proficiency_choices[1].choose + ' from) ')
       $('.pf2').append($('<p>')).append(choiceNum)
       for (var p = 0; p < data.proficiency_choices[1].from.length; p++) {
-        pc = document.createTextNode(data.proficiency_choices[1].from[p].name + ', ')
+        pc = document.createTextNode(data.proficiency_choices[1].from[p].name)
         $('.pf2').append(pc)
+        if (p < data.proficiency_choices[1].from.length - 1) {
+          $('.pf2').append(', ')
+        }
       }
       $('.pf2').append($('</p>'))
     }
@@ -116,10 +128,12 @@ $(document).ready(function () {
         $('.eq1').append(quantity)
       } else {
         for (var q = 0; q < eqdata.starting_equipment.length; q++) {
-          quantity = document.createTextNode(eqdata.starting_equipment[q].quantity + ' ' + eqdata.starting_equipment[q].item.name + ', ')
+          quantity = document.createTextNode(eqdata.starting_equipment[q].quantity + ' ' + eqdata.starting_equipment[q].item.name)
           $('.eq1').append(quantity)
+          if (q < eqdata.starting_equipment.length - 1) {
+            $('.eq1').append(', ')
+          }
         }
-
       }
       var r = 1
       while (r <= eqdata.choices_to_make) {
@@ -127,8 +141,11 @@ $(document).ready(function () {
         var eqc = document.createTextNode('Choice ' + r + ': ')
         $('.eq1').append($('<p>')).append(eqc)
         for (var s = 0; s < choices.length; s++) {
-          var eqquant = document.createTextNode(choices[s].from[0].quantity + ' ' + choices[s].from[0].item.name + ', ')
+          var eqquant = document.createTextNode(choices[s].from[0].quantity + ' ' + choices[s].from[0].item.name)
           $('.eq1').append(eqquant)
+          if (s < choices.length - 1) {
+            $('.eq1').append(', ')
+          }
         }
         $('.eq1').append($('</p>'))
         r++
