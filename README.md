@@ -10,10 +10,10 @@ This site was created using the D&D 5th edition API: http://www.dnd5eapi.co/
 # Planning process
 ![Wireframes](https://i.imgur.com/eD18KZl.jpg)
 
-## Challenges Faced
-*
+# Challenges Faced
+* JSON data is not standard (eg. some classes dont have Spells, Monk class has different proficiency_choices format, and Fighter doesnt have starting equipment)
 
-## Built With
+# Built With
 * HTML5
 * CSS3
 * Javascript

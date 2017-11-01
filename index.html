@@ -4,8 +4,9 @@
     <meta charset="utf-8">
     <title>Dungeons&Dragons</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+      </style>
   </head>
   <body>
     <div id='header'>
@@ -21,40 +22,32 @@
         <img class='charac left'>
         <div class='text'>
           <h2>Proficiencies</h2>
-          <table>
-            <tr>
-              <td>Hit Die:</td>
-              <td class='hd'></td>
-            </tr>
-            <tr class='pf'>
-              <td>Proficiencies:</td>
-              <td class='pf1'></td>
-            </tr>
-            <tr>
-              <td>Proficiency Choices <br> (choose 2):</td>
-              <td class='pf2'></td>
-            </tr>
-          </table>
+          <p class='hd'>Hit Die: </p>
+          <p class='pf1'>Proficiencies: </p>
+          <p class='pf2'>Proficiency Choices: </p>
         </div>
+        <div class="divider"></div>
       </div>
-      <div class="divider"></div>
       <div class='equipment'>
         <img class='right' src='images/equipment.jpg'>
         <div class='text'>
           <h2>Equipment</h2>
+          <p class ='eq1'>Starting Equipment: </p>
         </div>
+        <div class="divider"></div>
       </div>
-      <div class="divider"></div>
       <div class='spells'>
         <img class='left' src='images/spellbook.jpg'>
         <div class='text'>
           <h2>Spells</h2>
         </div>
+        <div class="divider"></div>
       </div>
-      <div class="divider"></div>
       <div class='subclass'>
         <div class='text'>
-          <h2 class='left'>Subclass:</h2>
+          <h2 class='subclassName'></h2>
+          <p class='flavor'></p>
+          <p class='desc'></p>
         </div>
       </div>
     </div>
