@@ -3,7 +3,6 @@
 
   // get data from API
   $.get('https://www.dnd5eapi.co/api/classes/' + index + '/').done(function (data) {
-    console.log(data)
     var charac = ''
     var title = ''
     switch (data.index) {
